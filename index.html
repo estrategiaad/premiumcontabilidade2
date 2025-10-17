@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Contabilidade - Impulsionando o Crescimento da Sua Empresa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#007B7E',
+            'accent-dark': '#006a6d',
+            'accent-light': '#e0f2f1',
+            'accent-text': '#005a5c',
+          },
+        },
+      },
+    }
+  </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* neutral gray background */
+        }
+        .animated-gradient {
+            background: linear-gradient(120deg, #f0f9ff, #f8fafc, #f0f9ff);
+            background-size: 200% 200%;
+            animation: gradient-animation 15s ease infinite;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .testimonial-slider {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+        .testimonial-slider::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, and Opera */
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- ========== Navigation Bar ========== -->
+    <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-slate-900">Premium<span class="text-accent">.</span></a>
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#features" class="text-slate-600 hover:text-accent transition-colors">Soluções</a>
+                    <a href="#why-choose" class="text-slate-600 hover:text-accent transition-colors">Porque nós?</a>
+                    <a href="#services" class="text-slate-600 hover:text-accent transition-colors">Serviços</a>
+                    <a href="#testimonials" class="text-slate-600 hover:text-accent transition-colors">Depoimentos</a>
+                    <a href="#faq" class="text-slate-600 hover:text-accent transition-colors">FAQ</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                     <a href="https://shre.ink/PremiumContabilidadeSite" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-block bg-accent text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-accent-dark transition-all shadow-sm hover:shadow-md">Falar com Especialista</a>
+                     <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4">
+            <a href="#features" class="block py-2 text-slate-600 hover:text-accent">Soluções</a>
+            <a href="#why-choose" class="block py-2 text-slate-600 hover:text-accent">Porque nós?</a>
+            <a href="#services" class="block py-2 text-slate-600 hover:text-accent">Serviços</a>
+            <a href="#testimonials" class="block py-2 text-slate-600 hover:text-accent">Depoimentos</a>
+            <a href="#faq" class="block py-2 text-slate-600 hover:text-accent">FAQ</a>
+            <a href="https://shre.ink/PremiumContabilidadeSite" target="_blank" rel="noopener noreferrer" class="block mt-4 w-full text-center bg-accent text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-accent-dark transition-all">Falar com Especialista</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== 1. Hero Section ========== -->
+        <section class="animated-gradient pt-16 pb-5 lg:pt-24 lg:pb-8 overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <div class="fade-in inline-flex items-center bg-accent-light text-accent-text font-semibold px-4 py-1.5 rounded-full text-base mb-6">
+                            <i data-lucide="award" class="w-5 h-5 mr-2"></i>
+                            +1000 empresas atendidas
+                        </div>
+                        <h1 class="fade-in text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-tight" style="animation-delay: 0.2s;">Conte conosco para impulsionar o crescimento sustentável de sua empresa</h1>
+                        <p class="fade-in text-lg md:text-xl text-slate-600 mb-10" style="animation-delay: 0.4s;">Suporte completo para a jornada empresarial, da abertura à gestão contábil avançada.</p>
+                        <div class="fade-in flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" style="animation-delay: 0.6s;">
+                            <a href="https://shre.ink/PremiumContabilidadeSite" target="_blank" rel="noopener noreferrer" class="bg-accent text-white font-semibold px-8 py-4 rounded-lg hover:bg-accent-dark transition-all shadow-lg hover:shadow-cyan-200 transform hover:-translate-y-1">Agende um diagnóstico</a>
+                            <a href="#services" class="bg-white text-slate-700 font-semibold px-8 py-4 rounded-lg hover:bg-slate-50 transition-all shadow-lg hover:shadow-slate-200 transform hover:-translate-y-1 ring-1 ring-slate-200">Nossos Serviços</a>
+                        </div>
+                        <p class="fade-in flex items-center justify-center lg:justify-start mt-8 text-slate-500 text-lg" style="animation-delay: 0.8s;">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-2"></i>
+                            <span>+24 anos trabalhando com excelência</span>
+                        </p>
+                    </div>
+                    <div class="fade-in" style="animation-delay: 0.3s;">
+                        <div class="aspect-video rounded-2xl shadow-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                                <source src="video.mp4" type="video/mp4">
+                                Seu navegador não suporta a tag de vídeo.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 2. Credibility Logos ========== -->
+        <div class="pt-4 pb-8 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="fade-in grid grid-cols-3 gap-8 items-center">
+                    <img src="abras.png" alt="Logo do Parceiro Abras" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 ease-in-out">
+                    <img src="conre.jpg" alt="Logo do Parceiro Conre" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 ease-in-out">
+                    <img src="icb.png" alt="Logo do Parceiro Close" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 ease-in-out w-32 h-32 object-contain">
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 3. Features Section ========== -->
+        <section id="features" class="pt-14 pb-20 lg:pt-24 lg:pb-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="fade-in text-4xl lg:text-5xl font-extrabold text-slate-900">Soluções Completas para o Sucesso do Seu Negócio</h2>
+                    <p class="fade-in mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Nossos serviços são desenhados para oferecer clareza, segurança e estratégia para sua empresa prosperar.</p>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- Main Card -->
+                    <div class="fade-in bg-white p-8 lg:p-12 rounded-2xl shadow-lg border border-slate-100 grid md:grid-cols-2 gap-8 items-center transition-all hover:shadow-xl hover:border-cyan-200">
+                        <div class="order-2 md:order-1">
+                            <i data-lucide="bar-chart-big" class="w-12 h-12 text-accent bg-accent-light p-3 rounded-xl mb-4"></i>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Diagnóstico Contábil Completo</h3>
+                            <p class="text-slate-600">Analisamos profundamente a saúde financeira e fiscal da sua empresa, identificando pontos de melhoria, riscos e oportunidades para otimização de tributos e processos.</p>
+                        </div>
+                        <div class="order-1 md:order-2">
+                             <img src="crescimento.png" alt="Gráfico de crescimento financeiro." class="rounded-xl w-1/2 mx-auto">
+                        </div>
+                    </div>
+
+                    <!-- Secondary Cards -->
+                    <div class="fade-in grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 transition-all hover:shadow-xl hover:border-cyan-200">
+                             <i data-lucide="clipboard-check" class="w-12 h-12 text-accent bg-accent-light p-3 rounded-xl mb-4"></i>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Estruturação de Plano Customizado</h3>
+                            <p class="text-slate-600">Com base no diagnóstico, criamos um plano de ação personalizado para modernizar sua gestão contábil, alinhado aos seus objetivos de negócio.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 transition-all hover:shadow-xl hover:border-cyan-200">
+                            <i data-lucide="users-2" class="w-12 h-12 text-accent bg-accent-light p-3 rounded-xl mb-4"></i>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Suporte Completo na Implementação</h3>
+                            <p class="text-slate-600">Nossa equipe oferece todo o suporte para implementar as ações definidas, garantindo uma transição suave e resultados efetivos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 4. "Why Choose" Section ========== -->
+        <section id="why-choose" class="pt-14 pb-20 lg:pt-24 lg:pb-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="fade-in text-4xl lg:text-5xl font-extrabold text-slate-900">Por que escolher a Premium?</h2>
+                    <p class="fade-in mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Combinamos experiência, tecnologia e um atendimento dedicado para ser o parceiro contábil que sua empresa merece.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="fade-in p-6 text-center">
+                        <div class="flex justify-center items-center mb-4">
+                           <i data-lucide="briefcase" class="w-10 h-10 text-accent"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Equipe Multidisciplinar</h3>
+                        <p class="text-slate-600">Consultores com mais de 24 anos de experiência prontos para te atender.</p>
+                    </div>
+                    <div class="fade-in p-6 text-center" style="animation-delay: 0.2s;">
+                         <div class="flex justify-center items-center mb-4">
+                           <i data-lucide="smile" class="w-10 h-10 text-accent"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Atendimento Personalizado</h3>
+                        <p class="text-slate-600">Foco total nas necessidades e objetivos estratégicos de cada cliente.</p>
+                    </div>
+                    <div class="fade-in p-6 text-center" style="animation-delay: 0.4s;">
+                         <div class="flex justify-center items-center mb-4">
+                           <i data-lucide="cloud" class="w-10 h-10 text-accent"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Ambiente Digital</h3>
+                        <p class="text-slate-600">Utilizamos as melhores tecnologias para processos ágeis e 100% seguros.</p>
+                    </div>
+                    <div class="fade-in p-6 text-center" style="animation-delay: 0.6s;">
+                         <div class="flex justify-center items-center mb-4">
+                           <i data-lucide="building" class="w-10 h-10 text-accent"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Estrutura Completa</h3>
+                        <p class="text-slate-600">Sede própria e infraestrutura completa para atendimento presencial e online.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== NEW Services Section ========== -->
+        <section id="services" class="pt-14 pb-20 lg:pt-24 lg:pb-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="fade-in text-4xl lg:text-5xl font-extrabold text-slate-900">Nossos Serviços</h2>
+                    <p class="fade-in mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Oferecemos um portfólio completo de serviços para garantir a saúde e o crescimento do seu negócio.</p>
+                </div>
+                <div class="space-y-16">
+                    <!-- Service 1 -->
+                    <div class="fade-in grid md:grid-cols-3 items-center gap-8 md:gap-12">
+                        <div class="flex items-center justify-center">
+                             <img src="servico1.png" alt="Ícone para Gestão Contábil" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
+                        </div>
+                        <div class="md:col-span-2 text-center md:text-left">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Gestão Contábil</h3>
+                            <p class="text-slate-600 text-lg">Serviços completos de escrituração e análise contábil, com relatórios gerenciais que apoiam o crescimento e a sustentabilidade financeira das empresas.</p>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="fade-in grid md:grid-cols-3 items-center gap-8 md:gap-12">
+                        <div class="md:col-span-2 text-center md:text-left md:order-1">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Gestão Fiscal e Tributária</h3>
+                            <p class="text-slate-600 text-lg">Cuidamos de toda a rotina fiscal com precisão e atualização constante, oferecendo planejamento tributário e cumprimento das obrigações legais com segurança.</p>
+                        </div>
+                         <div class="flex items-center justify-center md:order-2">
+                             <img src="servico2.png" alt="Ícone para Gestão Fiscal e Tributária" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                     <div class="fade-in grid md:grid-cols-3 items-center gap-8 md:gap-12">
+                        <div class="flex items-center justify-center">
+                             <img src="servico3.png" alt="Ícone para Gestão de Departamento Pessoal" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
+                        </div>
+                        <div class="md:col-span-2 text-center md:text-left">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Gestão de Departamento de Pessoal</h3>
+                            <p class="text-slate-600 text-lg">Administração completa da folha de pagamento, processos de admissão, rescisão e todas as rotinas do eSocial para manter sua empresa em conformidade.</p>
+                        </div>
+                    </div>
+                    <!-- Service 4 -->
+                     <div class="fade-in grid md:grid-cols-3 items-center gap-8 md:gap-12">
+                        <div class="md:col-span-2 text-center md:text-left md:order-1">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Legalização e Abertura de Empresas</h3>
+                            <p class="text-slate-600 text-lg">Assessoria completa na abertura, alteração e regularização de empresas, desde a escolha do regime tributário até o registro nos órgãos competentes.</p>
+                        </div>
+                         <div class="flex items-center justify-center md:order-2">
+                            <img src="servico4.png" alt="Ícone para Legalização e Abertura de Empresas" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
+                        </div>
+                    </div>
+                     <!-- Service 5 -->
+                     <div class="fade-in grid md:grid-cols-3 items-center gap-8 md:gap-12">
+                        <div class="flex items-center justify-center">
+                             <img src="servico5.png" alt="Ícone para Auditoria Independente" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
+                        </div>
+                        <div class="md:col-span-2 text-center md:text-left">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Auditoria Independente</h3>
+                            <p class="text-slate-600 text-lg">Análise técnica detalhada da contabilidade para identificar riscos, inconsistências e oportunidades de melhoria, assegurando transparência e credibilidade nas demonstrações financeiras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========== 5. Testimonials Section ========== -->
+        <section id="testimonials" class="pt-14 pb-20 lg:pt-24 lg:pb-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="fade-in text-4xl lg:text-5xl font-extrabold text-slate-900">Histórias de Sucesso com Nossos Clientes</h2>
+                    <p class="fade-in mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Veja o que dizem sobre a parceria com a Premium Contabilidade.</p>
+                </div>
+                <div class="fade-in flex overflow-x-auto space-x-8 pb-8 testimonial-slider lg:grid lg:grid-cols-2 lg:gap-8 lg:space-x-0">
+                    <!-- Testimonial 1 -->
+                    <div class="flex-shrink-0 w-full max-w-sm lg:max-w-none bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/48x48/26a69a/ffffff?text=GD" alt="Avatar de Geison Derrico" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold">Geison Derrico</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600">"Existe muito comprometimento e profissionalismo por parte da Premium em tratar com seus clientes. Me sinto muito satisfeito com os serviços realizados até o momento."</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="flex-shrink-0 w-full max-w-sm lg:max-w-none bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/48x48/26a69a/ffffff?text=ML" alt="Avatar de Milton Lucas Laviola" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold">Milton Lucas Laviola</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600">"Estamos caminhando juntos a pelo menos 4 anos. Grato pelo atendimento e prestatividade tanto dos sócios quanto dos funcionários! Nota 10 parabéns a equipe."</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="flex-shrink-0 w-full max-w-sm lg:max-w-none bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/48x48/26a69a/ffffff?text=EC" alt="Avatar de Etelvina Costa" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold">Etelvina Costa</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600">"Fui muito bem recepcionada e assessorada. Isso contribui para o bom desenvolvimento de meu trabalho."</p>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="flex-shrink-0 w-full max-w-sm lg:max-w-none bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/48x48/26a69a/ffffff?text=AD" alt="Avatar de Alice Domingues" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold">Alice Domingues</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600">"Empresa séria e altamente capacitada para atuar no mercado, prestando serviços com excelência, comprometimento e responsabilidade."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 6. FAQ Section ========== -->
+        <section id="faq" class="pt-14 lg:pt-24 pb-5 lg:pb-8">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="fade-in text-4xl lg:text-5xl font-extrabold text-slate-900">Perguntas Frequentes</h2>
+                    </div>
+                    <div class="fade-in space-y-4">
+                        <!-- FAQ Item 1 -->
+                        <div class="accordion-item bg-slate-50 border border-slate-200 rounded-xl">
+                            <button class="accordion-header w-full flex justify-between items-center text-left p-6">
+                                <span class="font-semibold text-lg">Vocês cuidam da folha de pagamento?</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="px-6 pb-6 text-slate-600">Sim. Temos soluções para a gestão completa do Departamento de Pessoal, incluindo admissões, encargos e obrigações acessórias.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 2 -->
+                         <div class="accordion-item bg-slate-50 border border-slate-200 rounded-xl">
+                            <button class="accordion-header w-full flex justify-between items-center text-left p-6">
+                                <span class="font-semibold text-lg">Também atendem 100% online?</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="px-6 pb-6 text-slate-600">Sim. Atendemos clientes em todo o Brasil com processos digitais e seguros, garantindo agilidade e conveniência para sua empresa.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 3 -->
+                        <div class="accordion-item bg-slate-50 border border-slate-200 rounded-xl">
+                            <button class="accordion-header w-full flex justify-between items-center text-left p-6">
+                                <span class="font-semibold text-lg">Atendem empresas já em operação?</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="px-6 pb-6 text-slate-600">Sim. Realizamos um diagnóstico completo, auxiliamos na regularização de pendências e assumimos a contabilidade com uma transição organizada e sem impacto para sua operação.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 4 -->
+                        <div class="accordion-item bg-slate-50 border border-slate-200 rounded-xl">
+                            <button class="accordion-header w-full flex justify-between items-center text-left p-6">
+                                <span class="font-semibold text-lg">Fazem abertura de empresa?</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="px-6 pb-6 text-slate-600">Sim, cuidamos de todo o processo do zero, desde a definição do tipo de empresa e regime tributário até o CNPJ ativo, para você começar com o pé direito.</p>
+                            </div>
+                        </div>
+                         <!-- FAQ Item 5 -->
+                        <div class="accordion-item bg-slate-50 border border-slate-200 rounded-xl">
+                            <button class="accordion-header w-full flex justify-between items-center text-left p-6">
+                                <span class="font-semibold text-lg">Quanto custa a contabilidade mensal?</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="px-6 pb-6 text-slate-600">Os valores dos nossos serviços variam conforme o porte, faturamento e complexidade de cada empresa. Por isso, nossas propostas são sempre personalizadas para atender às suas necessidades específicas. Agende uma conversa para um orçamento justo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 7. Final CTA ========== -->
+        <section id="contact" class="animated-gradient pt-10 lg:pt-16 pb-10 lg:pb-16">
+            <div class="container mx-auto px-6">
+                <div class="bg-gradient-to-br from-accent to-accent-dark text-white rounded-2xl p-8 lg:p-16 grid lg:grid-cols-2 gap-12 items-center shadow-2xl overflow-hidden relative">
+                     <div class="absolute -bottom-20 -right-20 w-48 h-48 bg-white/10 rounded-full"></div>
+                     <div class="absolute top-10 -left-24 w-48 h-48 bg-white/10 rounded-full"></div>
+                    <div class="relative z-10 text-center lg:text-left">
+                        <h2 class="fade-in text-4xl lg:text-5xl font-extrabold mb-4">Pronto para dar o próximo passo?</h2>
+                        <p class="fade-in text-lg text-cyan-100 mb-8">Fale com um de nossos especialistas e descubra como a Premium Contabilidade pode transformar a gestão da sua empresa.</p>
+                        <a href="https://shre.ink/PremiumContabilidadeSite" target="_blank" rel="noopener noreferrer" class="fade-in inline-block bg-white text-accent font-bold px-8 py-4 rounded-lg hover:bg-slate-50 transition-all shadow-lg transform hover:-translate-y-1">Fale com a Premium Contabilidade</a>
+                    </div>
+                    <div class="fade-in relative z-10 flex justify-center">
+                        <img src="close.png" alt="Mockup de um aplicativo de gestão financeira." class="rounded-xl shadow-2xl w-full max-w-sm">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== 8. Footer ========== -->
+    <footer class="bg-[#014849] text-slate-200 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">Premium Contabilidade © 2025</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
+                <a href="https://www.instagram.com/premium_contabil/profilecard/?igsh=Nml6bXFoaDJ3M2M3" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/premiumauditoria?mibextid=LQQJ4d&rdid=WO9gr3FgQSRucv8f&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16tyZwPXGX%2F%3Fmibextid%3DLQQJ4d#" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.google.com/maps/place/Premium+Contabilidade+e+Assessoria+Empresarial+-+Escrit%C3%Bório+de+Contabilidade,+Abertura+e+Regulariza%C3%A7%C3%A3o+de+Empresas/@-15.798662,-47.886715,16z/data=!4m6!3m5!1s0x935a3ab54cd40001:0xbea273a12f0bb2d2!8m2!3d-15.7986617!4d-47.8867151!16s%2Fg%2F11cn3g_5t3?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MTAxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
+                    <i data-lucide="globe" class="w-5 h-5"></i>
+                    <span>Google</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Accordion functionality
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+            const icon = header.querySelector('i');
+
+            header.addEventListener('click', () => {
+                // Close other open items
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherContent = otherItem.querySelector('.accordion-content');
+                        const otherIcon = otherItem.querySelector('.accordion-header i');
+                        otherContent.style.maxHeight = null;
+                        if(otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Toggle current item
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    if(icon) icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    if(icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Fade-in on scroll animation
+        const fadeInElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        fadeInElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        // Staggered hero animation on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroElements = document.querySelectorAll('.hero-animation');
+            heroElements.forEach((el, index) => {
+                el.style.transitionDelay = `${index * 150}ms`;
+                el.classList.add('visible');
+            });
+        });
+        
+        // Dynamic padding for fixed header
+        const header = document.getElementById('header');
+        const mainContent = document.querySelector('main');
+        function setMainPadding() {
+            if (header && mainContent) {
+                const headerHeight = header.offsetHeight;
+                mainContent.style.paddingTop = `${headerHeight}px`;
+            }
+        }
+        
+        window.addEventListener('load', setMainPadding);
+        window.addEventListener('resize', setMainPadding);
+
+
+    </script>
+</body>
+</html>
