@@ -116,8 +116,11 @@
                         </p>
                     </div>
                     <div class="fade-in" style="animation-delay: 0.3s;">
-                        <div class="aspect-video rounded-2xl shadow-2xl overflow-hidden bg-slate-200 flex items-center justify-center">
-                           <img src="https://placehold.co/900x460/e2e8f0/94a3b8?text=Video+Placeholder" alt="Placeholder para vídeo" class="w-full h-full object-cover"/>
+                        <div class="aspect-video rounded-2xl shadow-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                                <source src="video.mp4" type="video/mp4">
+                                Seu navegador não suporta a tag de vídeo.
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -128,9 +131,9 @@
         <div class="pt-4 pb-8 bg-white">
             <div class="container mx-auto px-6">
                 <div class="fade-in grid grid-cols-3 gap-8 items-center">
-                    <img src="https://placehold.co/200x80/e2e8f0/94a3b8?text=ABRAS" alt="Logo do Parceiro Abras" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 ease-in-out">
-                    <img src="https://placehold.co/200x80/e2e8f0/94a3b8?text=CONRE" alt="Logo do Parceiro Conre" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 ease-in-out">
-                    <img src="https://placehold.co/128x128/e2e8f0/94a3b8?text=ICB" alt="Logo do Parceiro ICB" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 ease-in-out w-32 h-32 object-contain">
+                    <img src="abras.png" alt="Logo do Parceiro Abras" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 ease-in-out">
+                    <img src="conre.jpg" alt="Logo do Parceiro Conre" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 ease-in-out">
+                    <img src="icb.png" alt="Logo do Parceiro Close" class="mx-auto grayscale hover:grayscale-0 transition-all duration-300 ease-in-out w-32 h-32 object-contain">
                 </div>
             </div>
         </div>
@@ -152,7 +155,7 @@
                             <p class="text-slate-600">Analisamos profundamente a saúde financeira e fiscal da sua empresa, identificando pontos de melhoria, riscos e oportunidades para otimização de tributos e processos.</p>
                         </div>
                         <div class="order-1 md:order-2">
-                             <img src="https://placehold.co/549x276/e2e8f0/94a3b8?text=Crescimento" alt="Gráfico de crescimento financeiro." class="rounded-xl w-1/2 mx-auto">
+                             <img src="crescimento.png" alt="Gráfico de crescimento financeiro." class="rounded-xl w-1/2 mx-auto">
                         </div>
                     </div>
 
@@ -224,7 +227,7 @@
                     <!-- Service 1 -->
                     <div class="fade-in grid md:grid-cols-3 items-center gap-8 md:gap-12">
                         <div class="flex items-center justify-center">
-                             <img src="https://placehold.co/400x400/e0f2f1/007B7E?text=Servi%C3%A7o+1" alt="Ícone para Gestão Contábil" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
+                             <img src="servico1.png" alt="Ícone para Gestão Contábil" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
                         </div>
                         <div class="md:col-span-2 text-center md:text-left">
                             <h3 class="text-2xl font-bold text-slate-900 mb-3">Gestão Contábil</h3>
@@ -233,18 +236,18 @@
                     </div>
                     <!-- Service 2 -->
                     <div class="fade-in grid md:grid-cols-3 items-center gap-8 md:gap-12">
-                        <div class="flex items-center justify-center md:order-2">
-                             <img src="https://placehold.co/400x400/e0f2f1/007B7E?text=Servi%C3%A7o+2" alt="Ícone para Gestão Fiscal e Tributária" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
-                        </div>
                         <div class="md:col-span-2 text-center md:text-left md:order-1">
                             <h3 class="text-2xl font-bold text-slate-900 mb-3">Gestão Fiscal e Tributária</h3>
                             <p class="text-slate-600 text-lg">Cuidamos de toda a rotina fiscal com precisão e atualização constante, oferecendo planejamento tributário e cumprimento das obrigações legais com segurança.</p>
+                        </div>
+                         <div class="flex items-center justify-center md:order-2">
+                             <img src="servico2.png" alt="Ícone para Gestão Fiscal e Tributária" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
                         </div>
                     </div>
                     <!-- Service 3 -->
                      <div class="fade-in grid md:grid-cols-3 items-center gap-8 md:gap-12">
                         <div class="flex items-center justify-center">
-                             <img src="https://placehold.co/400x400/e0f2f1/007B7E?text=Servi%C3%A7o+3" alt="Ícone para Gestão de Departamento Pessoal" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
+                             <img src="servico3.png" alt="Ícone para Gestão de Departamento Pessoal" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
                         </div>
                         <div class="md:col-span-2 text-center md:text-left">
                             <h3 class="text-2xl font-bold text-slate-900 mb-3">Gestão de Departamento de Pessoal</h3>
@@ -253,18 +256,18 @@
                     </div>
                     <!-- Service 4 -->
                      <div class="fade-in grid md:grid-cols-3 items-center gap-8 md:gap-12">
-                        <div class="flex items-center justify-center md:order-2">
-                           <img src="https://placehold.co/400x400/e0f2f1/007B7E?text=Servi%C3%A7o+4" alt="Ícone para Legalização e Abertura de Empresas" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
-                        </div>
                         <div class="md:col-span-2 text-center md:text-left md:order-1">
                             <h3 class="text-2xl font-bold text-slate-900 mb-3">Legalização e Abertura de Empresas</h3>
                             <p class="text-slate-600 text-lg">Assessoria completa na abertura, alteração e regularização de empresas, desde a escolha do regime tributário até o registro nos órgãos competentes.</p>
+                        </div>
+                         <div class="flex items-center justify-center md:order-2">
+                            <img src="servico4.png" alt="Ícone para Legalização e Abertura de Empresas" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
                         </div>
                     </div>
                      <!-- Service 5 -->
                      <div class="fade-in grid md:grid-cols-3 items-center gap-8 md:gap-12">
                         <div class="flex items-center justify-center">
-                            <img src="https://placehold.co/400x400/e0f2f1/007B7E?text=Servi%C3%A7o+5" alt="Ícone para Auditoria Independente" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
+                             <img src="servico5.png" alt="Ícone para Auditoria Independente" class="rounded-2xl shadow-lg w-full max-w-xs mx-auto aspect-square object-cover">
                         </div>
                         <div class="md:col-span-2 text-center md:text-left">
                             <h3 class="text-2xl font-bold text-slate-900 mb-3">Auditoria Independente</h3>
@@ -414,7 +417,7 @@
                         <a href="https://shre.ink/PremiumContabilidadeSite" target="_blank" rel="noopener noreferrer" class="fade-in inline-block bg-white text-accent font-bold px-8 py-4 rounded-lg hover:bg-slate-50 transition-all shadow-lg transform hover:-translate-y-1">Fale com a Premium Contabilidade</a>
                     </div>
                     <div class="fade-in relative z-10 flex justify-center">
-                        <img src="https://placehold.co/320x480/e2e8f0/94a3b8?text=App+Mockup" alt="Mockup de um aplicativo de gestão financeira." class="rounded-xl shadow-2xl w-full max-w-sm">
+                        <img src="close.png" alt="Mockup de um aplicativo de gestão financeira." class="rounded-xl shadow-2xl w-full max-w-sm">
                     </div>
                 </div>
             </div>
@@ -533,4 +536,3 @@
     </script>
 </body>
 </html>
-
