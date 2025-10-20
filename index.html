@@ -193,8 +193,17 @@
                 <!-- Mobile View: Carousel -->
                 <div class="fade-in md:hidden relative overflow-hidden">
                     <div id="logo-track" class="flex transition-transform duration-500 ease-in-out">
-                        <!-- Logos are duplicated for infinite loop effect -->
+                        <!-- Logos will be populated by JS -->
                     </div>
+                     <!-- Logo Carousel Controls for Mobile -->
+                    <button id="prev-logo" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/70 backdrop-blur-sm rounded-full p-1 shadow-md z-10">
+                        <span class="sr-only">Anterior</span>
+                        <i data-lucide="chevron-left" class="w-5 h-5 text-slate-700"></i>
+                    </button>
+                    <button id="next-logo" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/70 backdrop-blur-sm rounded-full p-1 shadow-md z-10">
+                        <span class="sr-only">Próximo</span>
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-slate-700"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -409,11 +418,11 @@
                             </div>
                         </div>
                     </div>
-                     <!-- Controls --><button id="prev-testimonial" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all z-10 -translate-x-1/2 focus:outline-none hidden md:block">
+                     <!-- Controls --><button id="prev-testimonial" class="absolute top-1/2 left-2 md:left-0 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm hover:bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all z-10 md:-translate-x-1/2 focus:outline-none block">
                          <span class="sr-only">Depoimento Anterior</span>
                          <i data-lucide="chevron-left" class="w-6 h-6 text-slate-800"></i>
                     </button>
-                    <button id="next-testimonial" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all z-10 translate-x-1/2 focus:outline-none hidden md:block">
+                    <button id="next-testimonial" class="absolute top-1/2 right-2 md:right-0 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm hover:bg-white rounded-full p-2 md:p-3 shadow-lg hover:shadow-xl transition-all z-10 md:translate-x-1/2 focus:outline-none block">
                         <span class="sr-only">Próximo Depoimento</span>
                          <i data-lucide="chevron-right" class="w-6 h-6 text-slate-800"></i>
                     </button>
@@ -645,7 +654,6 @@
                 const numSlides = Math.ceil(logos.length / logosPerSlide);
                 logoTrack.innerHTML = ''; // Clear existing content
 
-                // Create and append slides with groups of 3 logos
                 for (let i = 0; i < numSlides; i++) {
                     const slide = document.createElement('div');
                     slide.className = 'w-full flex-shrink-0 flex justify-around items-center p-2';
@@ -663,8 +671,10 @@
                 }
 
                 const logoSlides = Array.from(logoTrack.children);
-                if (logoSlides.length <= 1) return; // No need for carousel if only one slide
+                if (logoSlides.length <= 1) return;
 
+                const prevLogoBtn = document.getElementById('prev-logo');
+                const nextLogoBtn = document.getElementById('next-logo');
                 let logoIndex = 0;
                 let autoSlideInterval;
 
@@ -677,14 +687,25 @@
                     autoSlideInterval = setInterval(() => {
                         logoIndex = (logoIndex + 1) % logoSlides.length;
                         updateLogoCarousel();
-                    }, 4000); // Change slide every 4 seconds
+                    }, 4000);
                 };
 
                 const stopAutoSlide = () => {
                     clearInterval(autoSlideInterval);
                 };
+                
+                nextLogoBtn.addEventListener('click', () => {
+                    logoIndex = (logoIndex + 1) % logoSlides.length;
+                    updateLogoCarousel();
+                    startAutoSlide();
+                });
 
-                // Swipe functionality
+                prevLogoBtn.addEventListener('click', () => {
+                    logoIndex = (logoIndex - 1 + logoSlides.length) % logoSlides.length;
+                    updateLogoCarousel();
+                    startAutoSlide();
+                });
+
                 let touchstartX = 0;
                 logoTrack.addEventListener('touchstart', e => {
                     touchstartX = e.changedTouches[0].screenX;
