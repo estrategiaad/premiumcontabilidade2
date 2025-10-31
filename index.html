@@ -171,7 +171,7 @@
     <main>
         <!-- ========== 1. Hero Section ========== -->
         <!-- Fundo de cor sólida para performance, com tom da marca -->
-        <section class="bg-[#007376] pt-16 pb-10 lg:pt-24 lg:pb-16 overflow-hidden">
+        <section class="bg-[#007376] pt-16 pb-16 lg:pt-24 lg:pb-24 overflow-hidden">
             <div class="container mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="text-center lg:text-left">
@@ -688,32 +688,57 @@
             const nextTestimonialBtn = document.getElementById('next-testimonial');
             const testimonialSlides = Array.from(testimonialTrack.children);
             let testimonialIndex = 0;
+            let autoSlideInterval; // Variável para guardar o timer
 
             const updateTestimonialCarousel = () => {
                 testimonialTrack.style.transform = `translateX(-${testimonialIndex * 100}%)`;
             };
 
+            // Função para parar o autoplay
+            const stopAutoSlide = () => {
+                clearInterval(autoSlideInterval);
+            };
+
+            // Função para (re)iniciar o autoplay
+            const startAutoSlide = () => {
+                stopAutoSlide(); // Limpa qualquer timer anterior
+                autoSlideInterval = setInterval(() => {
+                    // Lógica para avançar para o próximo slide
+                    testimonialIndex = (testimonialIndex + 1) % testimonialSlides.length;
+                    updateTestimonialCarousel();
+                }, 8000); // 8000ms = 8 segundos
+            };
+
             nextTestimonialBtn.addEventListener('click', () => {
                 testimonialIndex = (testimonialIndex + 1) % testimonialSlides.length;
                 updateTestimonialCarousel();
+                startAutoSlide(); // Reinicia o timer ao clicar
             });
 
             prevTestimonialBtn.addEventListener('click', () => {
                 testimonialIndex = (testimonialIndex - 1 + testimonialSlides.length) % testimonialSlides.length;
                 updateTestimonialCarousel();
+                startAutoSlide(); // Reinicia o timer ao clicar
             });
 
             // Swipe functionality for mobile
             let touchstartX = 0;
             testimonialTrack.addEventListener('touchstart', e => {
                 touchstartX = e.changedTouches[0].screenX;
+                stopAutoSlide(); // Pausa o timer ao tocar
             }, { passive: true });
 
             testimonialTrack.addEventListener('touchend', e => {
                 const touchendX = e.changedTouches[0].screenX;
+                // Dispara o clique, que já reinicia o timer
                 if (touchendX < touchstartX - 50) nextTestimonialBtn.click();
                 if (touchendX > touchstartX + 50) prevTestimonialBtn.click();
+                
+                // Reinicia o timer mesmo se o swipe não for completo
+                startAutoSlide();
             }, { passive: true });
+
+            startAutoSlide(); // Inicia o autoplay quando a página carrega
         }
 
         // Logo Carousel for Mobile
